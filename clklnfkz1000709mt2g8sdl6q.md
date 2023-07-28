@@ -1,8 +1,8 @@
 ---
-title: "Day 10 — Advanced Git & GitHub for DevOps Engineers"
+title: "Day 10 — Advanced Git & GitHub for DevOps Engineers Part 1"
 datePublished: Thu Jul 27 2023 21:10:40 GMT+0000 (Coordinated Universal Time)
 cuid: clklnfkz1000709mt2g8sdl6q
-slug: day-10-advanced-git-github-for-devops-engineers
+slug: day-10-advanced-git-github-for-devops-engineers-part-1
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1690492120711/9feb5365-200d-46b1-9d69-880bc2ddf30e.webp
 tags: github, git, devops, 90daysofdevops, trainwithshubham
 
