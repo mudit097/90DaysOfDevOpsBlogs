@@ -66,8 +66,7 @@ In this task, our focus will be on branches, and we'll explore how to utilize th
         
         ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1690571089227/2a8433f5-417f-4fcc-80e1-891ea928e90e.png align="center")
         
-
-1. In the middle of your work, your team urgently requests you to handle an important task in the main branch. To handle this situation without losing your progress, you can utilize the "**git stash**" command to save your changes without committing them.
+2. In the middle of your work, your team urgently requests you to handle an important task in the main branch. To handle this situation without losing your progress, you can utilize the "**git stash**" command to save your changes without committing them.
     
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1690571128462/b8ad5679-bc3e-4ada-bd4a-2e8764685399.png align="center")
