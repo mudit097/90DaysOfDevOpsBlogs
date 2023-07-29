@@ -144,4 +144,4 @@ tags: linux, devops, cheatsheet, 90daysofdevops, trainwithshubham
 
 # Conclusion
 
-In this session, we covered a range of essential Linux and Git-GitHub commands. From navigating directories, managing files, and handling processes in Linux to initializing repositories, creating commits, and collaborating on GitHub, you now have a solid foundation to work effectively in both environments. Keep practicing these commands to become more proficient and efficient in your DevOps endeavors. Embrace the challenges ahead and stay excited for continued growth and learning! 💪😊🚀
+In this session, we covered a range of essential Linux and Git-GitHub commands. From navigating directories, managing files, and handling processes in Linux to initializing repositories, creating commits, and collaborating on GitHub, you now have a solid foundation to work effectively in both environments. Keep practicing these commands to become more proficient and efficient in your DevOps endeavors. Embrace the challenges ahead and stay excited for continued growth and learning! 💪😊🚀.
