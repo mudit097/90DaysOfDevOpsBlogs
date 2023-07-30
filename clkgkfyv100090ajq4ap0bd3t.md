@@ -5,6 +5,7 @@ datePublished: Mon Jul 24 2023 07:48:08 GMT+0000 (Coordinated Universal Time)
 cuid: clkgkfyv100090ajq4ap0bd3t
 slug: day1-of-90daysfordevops
 canonical: https://muditmathur121.medium.com/day1-90daysfordevops-16def47aef10
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1690727854971/ef93122b-0d66-42e7-88d4-751212cbb7f4.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1690185234778/d09e4b24-ffb1-465d-9955-5c8df5e64b34.png
 tags: linux, aws, devops, 90daysofdevops
 
