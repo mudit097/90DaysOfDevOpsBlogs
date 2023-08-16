@@ -62,7 +62,7 @@ The Docker Interview Questions Blog. Along with the answers!
     
     Docker and a hypervisor are both technologies used for virtualization.
     
-    ![](https://miro.medium.com/v2/resize:fit:875/1*sPFJiV5skvHlPGjeCVfwpQ.jpeg align="center")
+    ![](https://miro.medium.com/v2/resize:fit:875/0*VZpbWnegwR4G2T7M.jpeg align="center")
     
 8. **What is the difference between an Image, a Container, and an Engine?**
     
@@ -183,7 +183,7 @@ The Docker Interview Questions Blog. Along with the answers!
         
     
     ```plaintext
-      docker export image_name > image.tar
+    docker export image_name > image.tar
     ```
     
 25. **How do you create a docker container based on an existing container?**
@@ -294,9 +294,9 @@ The Docker Interview Questions Blog. Along with the answers!
         
     * Perform up-to-date security checks and keep updating the security vulnerabilities.
         
-
-In this blog, I have put my heart to collect interview questions on Docker. If you have any questions or would like to share your experiences, feel free to leave a comment below. Don’t forget to read my blogs and connect with me on LinkedIn and let’s have a conversation.
-
-To help me improve my blog and correct my mistakes, I am available on LinkedIn as [**<mark>Mudit Mathur</mark>**](https://www.linkedin.com/in/mudit--mathur/). Do reach me and I am open to suggestions and corrections.
-
-#Day21 #90daysofdevops
+    
+    In this blog, I have put my heart to collect interview questions on Docker. If you have any questions or would like to share your experiences, feel free to leave a comment below. Don’t forget to read my blogs and connect with me on LinkedIn and let’s have a conversation.
+    
+    To help me improve my blog and correct my mistakes, I am available on LinkedIn as [**Mudit Mathur**](https://www.linkedin.com/in/mudit--mathur/). Do reach me and I am open to suggestions and corrections.
+    
+    #Day21 #90daysofdevops
