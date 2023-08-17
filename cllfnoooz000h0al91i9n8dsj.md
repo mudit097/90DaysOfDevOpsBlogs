@@ -215,7 +215,7 @@ Jenkins requires Java 11 or 17 since Jenkins 2.357 and LTS 2.361.1.
     
     For me, Jenkins is a tool all about automating the process so that I can reduce the time and manpower utilized and increase the productivity and accuracy of the tasks performed. By creating CI/CD pipelines we automate the SDLC, thereby decreasing human intervention.
     
-    I understand Pipelines as a series of connected stages that helps in the flow, of day-to-day life. For example water pipeline, sewage pipeline, oil pipeline, etc. The same way are CI/CD Pipelines where the steps of SDLC are automated.
+    I understand Pipelines as a series of connected stages that helps in the flow, of day-to-day life. For example water pipeline, sewage pipeline, oil pipeline, etc. The same way is CI/CD Pipelines where the steps of SDLC are automated.
     
     For example, Jenkins projects can also be built in such a way that once a code is committed in the VCS, like GitHub, it automatically builds the next step.
     
