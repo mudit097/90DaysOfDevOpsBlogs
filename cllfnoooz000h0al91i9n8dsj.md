@@ -76,104 +76,102 @@ Jenkins requires Java 11 or 17 since Jenkins 2.357 and LTS 2.361.1.
 
 1. Install Java 11 on your machine.
     
-
-```plaintext
- sudo apt-get update
- sudo apt install openjdk-11-jdk
-```
-
-![](https://miro.medium.com/v2/resize:fit:875/1*h1jRQiegs3Bh56ULDIBbkg.jpeg align="left")
-
-To check the version installed, use the following command:
-
-```plaintext
- java -version
-```
-
-![](https://miro.medium.com/v2/resize:fit:875/1*5tKs-UreBdsSJdnnescqLg.jpeg align="left")
-
-1. Install Jenkins.
+    ```plaintext
+     sudo apt-get update
+     sudo apt install openjdk-11-jdk
+    ```
     
-
-Download the Jenkins repository key and save it in a file using sudo.
-
-```plaintext
- curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
-   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-```
-
-Add the Jenkins repository as a package for the package manager (apt) on your Ubuntu.
-
-```plaintext
- echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-   /etc/apt/sources.list.d/jenkins.list > /dev/null
-```
-
-![](https://miro.medium.com/v2/resize:fit:875/1*mS9JuDRGuUoVJG6Ebc6STg.jpeg align="left")
-
-Update your system, again.
-
-```plaintext
- sudo apt-get update
-```
-
-Install Jenkins:
-
-```plaintext
- sudo apt-get install jenkins
-```
-
-![](https://miro.medium.com/v2/resize:fit:875/1*lR3-d3yK_Xn5qe42HPIwxg.jpeg align="left")
-
-1. Configure Jenkins
+    ![](https://miro.medium.com/v2/resize:fit:875/1*h1jRQiegs3Bh56ULDIBbkg.jpeg align="center")
     
-
-On your AWS console, modify the security group for Inbound rules. Open port 8080 to your host from CustomTCP.
-
-![](https://miro.medium.com/v2/resize:fit:875/1*XEF6UnHj7KDz-msMVDjt2Q.jpeg align="left")
-
-Verify Jenkins configuration by opening it in your browser.
-
-Open your hostIP:8080 in your browser. You should get the “Getting Started” page.
-
-> *Trivia: Why do we use port 8080? Port 8080 is used for Web servers.*
-> 
-> *Since Jenkins is Apache tomcat based Web server (HTTP), the default is port 8080.*
-
-![](https://miro.medium.com/v2/resize:fit:875/1*n9USu3SRi9u_F1Gh4Mmd0Q.jpeg align="left")
-
-Use the directory and your host using the following command to get the administrator password.
-
-```plaintext
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-```
-
-![](https://miro.medium.com/v2/resize:fit:875/1*IGCZFpFH2b2QZUxYcqQu9w.jpeg align="left")
-
-You will be led to the “Customize Jenkins” page. Select “Install suggested plugins”
-
-![](https://miro.medium.com/v2/resize:fit:875/1*WUhyeEnTYKf5XY-R59Vq6w.jpeg align="left")
-
-Wait for the installation of plugins to complete. It usually takes 4–8 minutes.
-
-Once the installation is complete, the “Create First Admin User” page appears. Provide the details and go ahead by clicking on Save and Continue.
-
-![](https://miro.medium.com/v2/resize:fit:875/1*WUhyeEnTYKf5XY-R59Vq6w.jpeg align="left")
-
-Wait for the installation of plugins to complete. It usually takes 4–8 minutes.
-
-Once the installation is complete, the “Create First Admin User” page appears. Provide the details and go ahead by clicking on Save and Continue.
-
-![](https://miro.medium.com/v2/resize:fit:875/1*8qKczrFLlrw_n_Yjj8wRaQ.jpeg align="left")
-
-Now the “Jenkins is Ready!” page appears. Click on “Start using Jenkins”.
-
-![](https://miro.medium.com/v2/resize:fit:875/1*DgISzPHo1N-Z7aEBFP9hbg.jpeg align="left")
-
-Congratulations! You have successfully installed Jenkins on your host and connected to the Jenkins web server.
-
-![](https://miro.medium.com/v2/resize:fit:875/1*jK1MmxGwCo7PU_jx51537A.jpeg align="left")
+    To check the version installed, use the following command:
+    
+    ```plaintext
+     java -version
+    ```
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*5tKs-UreBdsSJdnnescqLg.jpeg align="center")
+    
+2. Install Jenkins.
+    
+    Download the Jenkins repository key and save it in a file using sudo.
+    
+    ```plaintext
+     curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+       /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    ```
+    
+    Add the Jenkins repository as a package for the package manager (apt) on your Ubuntu.
+    
+    ```plaintext
+     echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+       https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+       /etc/apt/sources.list.d/jenkins.list > /dev/null
+    ```
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*mS9JuDRGuUoVJG6Ebc6STg.jpeg align="center")
+    
+    Update your system, again.
+    
+    ```plaintext
+     sudo apt-get update
+    ```
+    
+    Install Jenkins:
+    
+    ```plaintext
+     sudo apt-get install jenkins
+    ```
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*lR3-d3yK_Xn5qe42HPIwxg.jpeg align="center")
+    
+3. Configure Jenkins
+    
+    On your AWS console, modify the security group for Inbound rules. Open port 8080 to your host from CustomTCP.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*XEF6UnHj7KDz-msMVDjt2Q.jpeg align="center")
+    
+    Verify Jenkins configuration by opening it in your browser.
+    
+    Open your hostIP:8080 in your browser. You should get the “Getting Started” page.
+    
+    > *Trivia: Why do we use port 8080? Port 8080 is used for Web servers.*
+    > 
+    > *Since Jenkins is Apache tomcat based Web server (HTTP), the default is port 8080.*
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*n9USu3SRi9u_F1Gh4Mmd0Q.jpeg align="center")
+    
+    Use the directory and your host using the following command to get the administrator password.
+    
+    ```plaintext
+    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+    ```
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*IGCZFpFH2b2QZUxYcqQu9w.jpeg align="center")
+    
+    You will be led to the “Customize Jenkins” page. Select “Install suggested plugins”
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*WUhyeEnTYKf5XY-R59Vq6w.jpeg align="center")
+    
+    Wait for the installation of plugins to complete. It usually takes 4–8 minutes.
+    
+    Once the installation is complete, the “Create First Admin User” page appears. Provide the details and go ahead by clicking on Save and Continue.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*WUhyeEnTYKf5XY-R59Vq6w.jpeg align="center")
+    
+    Wait for the installation of plugins to complete. It usually takes 4–8 minutes.
+    
+    Once the installation is complete, the “Create First Admin User” page appears. Provide the details and go ahead by clicking on Save and Continue.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*8qKczrFLlrw_n_Yjj8wRaQ.jpeg align="center")
+    
+    Now the “Jenkins is Ready!” page appears. Click on “Start using Jenkins”.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*DgISzPHo1N-Z7aEBFP9hbg.jpeg align="center")
+    
+    Congratulations! You have successfully installed Jenkins on your host and connected to the Jenkins web server.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*jK1MmxGwCo7PU_jx51537A.jpeg align="center")
+    
 
 # **4\. ✅ Tasks**
 
@@ -181,58 +179,54 @@ Congratulations! You have successfully installed Jenkins on your host and connec
 
 1. Click on “New Item” to create a new Jenkins job.
     
-
-![](https://miro.medium.com/v2/resize:fit:875/1*I_u-m6RPpTArt3xVHiSlzw.jpeg align="left")
-
-1. Enter the name for the job “HelloWorldPipeline” and select “Freestyle project”, then click “OK”.
+    ![](https://miro.medium.com/v2/resize:fit:875/1*I_u-m6RPpTArt3xVHiSlzw.jpeg align="left")
     
-
-![](https://miro.medium.com/v2/resize:fit:875/1*K2Eb1yXNXrgefOEtjr8DrQ.jpeg align="left")
-
-1. In the configuration page that appears, scroll down to the “Build” section. Click on the “Add build step” dropdown and select “Execute shell” as the host machine’s OS is Linux.
+2. Enter the name for the job “HelloWorldPipeline” and select “Freestyle project”, then click “OK”.
     
-
-![](https://miro.medium.com/v2/resize:fit:875/1*XY7pRq6WvztuvvK6Ck2IDw.jpeg align="left")
-
-Once you select Execute shell, the Execute shell window opens. In the command section, enter the following:
-
-```plaintext
- echo "Hello World!"
-```
-
-Click on Save, after entering the command to save the pipeline configuration.
-
-![](https://miro.medium.com/v2/resize:fit:875/1*rjB1sWS7aTCc5Wu3dDah2Q.jpeg align="left")
-
-1. Run the pipeline, to see the output in the console log. To run the pipeline, go to your Pipeline dashboard and click on Build Now.
+    ![](https://miro.medium.com/v2/resize:fit:875/1*K2Eb1yXNXrgefOEtjr8DrQ.jpeg align="left")
     
-
-![](https://miro.medium.com/v2/resize:fit:875/1*fZRUXYHqOTHnbz2UUnn0dQ.jpeg align="left")
-
-View the output in the Console output.
-
-![](https://miro.medium.com/v2/resize:fit:875/1*vy84IJ8EO6jkoTY1fYxoKQ.jpeg align="left")
-
-Well, you can see that the build is successful, and the console output is proof of that.
-
-Yeah! This can be a mini-project to get hands on the Jenkins freestyle pipeline project.
-
-## **4.2 Task 2: What have you understood in Jenkins? Write a small article in your own words.**
-
-For me, Jenkins is a tool all about automating the process so that I can reduce the time and manpower utilized and increase the productivity and accuracy of the tasks performed. By creating CI/CD pipelines we automate the SDLC, thereby decreasing human intervention.
-
-I understand Pipelines as a series of connected stages that helps in the flow, of day-to-day life. For example water pipeline, sewage pipeline, oil pipeline, etc. The same way are CI/CD Pipelines where the steps of SDLC are automated.
-
-For example, Jenkins projects can also be built in such a way that once a code is committed in the VCS, like GitHub, it automatically builds the next step.
-
-Jenkins is based on Master-Slave architecture. Jenkins is installed ONLY on the Master node. There is no Jenkins on slave nodes. Java should be installed on all nodes.
-
-When builds are executed on the Master node, the workspace will be created on the Slave. Job is completed on the slave/agent and the workspace files can be seen on Master Node.
-
-To conclude, Jenkins is an Open-Source tool, that is helping developers all over the world to automate the SDLC and easily implement the CI/CD pipelines.
-
-In this blog, I have understood and written about Jenkins, Jenkins architecture, Jenkins Setup, and a mini-project on Jenkins. If you have any questions or would like to share your experiences, feel free to leave a comment below. Don’t forget to read my blogs and connect with me on LinkedIn and let’s have a conversation.
-
-To help me improve my blog and correct my mistakes, I am available on LinkedIn as [Mudit Mathur](https://www.linkedin.com/in/mudit--mathur/). Do reach me and I am open to suggestions and corrections.
-
-#Day22 #90daysofdevops
+3. In the configuration page that appears, scroll down to the “Build” section. Click on the “Add build step” dropdown and select “Execute shell” as the host machine’s OS is Linux.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*XY7pRq6WvztuvvK6Ck2IDw.jpeg align="left")
+    
+    Once you select Execute shell, the Execute shell window opens. In the command section, enter the following:
+    
+    ```plaintext
+    echo "Hello World!"
+    ```
+    
+    Click on Save, after entering the command to save the pipeline configuration.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*rjB1sWS7aTCc5Wu3dDah2Q.jpeg align="left")
+    
+4. Run the pipeline, to see the output in the console log. To run the pipeline, go to your Pipeline dashboard and click on Build Now.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*fZRUXYHqOTHnbz2UUnn0dQ.jpeg align="left")
+    
+    View the output in the Console output.
+    
+    ![](https://miro.medium.com/v2/resize:fit:875/1*vy84IJ8EO6jkoTY1fYxoKQ.jpeg align="left")
+    
+    Well, you can see that the build is successful, and the console output is proof of that.
+    
+    Yeah! This can be a mini-project to get hands on the Jenkins freestyle pipeline project.
+    
+    ## **4.2 Task 2: What have you understood in Jenkins? Write a small article in your own words.**
+    
+    For me, Jenkins is a tool all about automating the process so that I can reduce the time and manpower utilized and increase the productivity and accuracy of the tasks performed. By creating CI/CD pipelines we automate the SDLC, thereby decreasing human intervention.
+    
+    I understand Pipelines as a series of connected stages that helps in the flow, of day-to-day life. For example water pipeline, sewage pipeline, oil pipeline, etc. The same way are CI/CD Pipelines where the steps of SDLC are automated.
+    
+    For example, Jenkins projects can also be built in such a way that once a code is committed in the VCS, like GitHub, it automatically builds the next step.
+    
+    Jenkins is based on Master-Slave architecture. Jenkins is installed ONLY on the Master node. There is no Jenkins on slave nodes. Java should be installed on all nodes.
+    
+    When builds are executed on the Master node, the workspace will be created on the Slave. Job is completed on the slave/agent and the workspace files can be seen on Master Node.
+    
+    To conclude, Jenkins is an Open-Source tool, that is helping developers all over the world to automate the SDLC and easily implement the CI/CD pipelines.
+    
+    In this blog, I have understood and written about Jenkins, Jenkins architecture, Jenkins Setup, and a mini-project on Jenkins. If you have any questions or would like to share your experiences, feel free to leave a comment below. Don’t forget to read my blogs and connect with me on LinkedIn and let’s have a conversation.
+    
+    To help me improve my blog and correct my mistakes, I am available on LinkedIn as [Mudit Mathur](https://www.linkedin.com/in/mudit--mathur/). Do reach me and I am open to suggestions and corrections.
+    
+    #Day22 #90daysofdevops
