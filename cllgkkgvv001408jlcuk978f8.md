@@ -96,6 +96,8 @@ In the final line of the Console Output, we can observe that Finished: Success i
 
 I have verified that the ToDo list application is accessible on host\_IP:8000.
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692615346027/06c7f171-d79e-4775-a272-7fb1516d2886.jpeg align="center")
+
 ### **3.2. ✅ Task 2**
 
 In task 2, we need to create a Jenkins project to run the "docker-compose up -d" command to start the multiple containers defined in the compose file. Set up a cleanup step in the Jenkins project to run the "docker-compose down" command to stop and remove the containers defined in the compose file.
