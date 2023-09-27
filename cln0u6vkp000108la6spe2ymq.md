@@ -32,11 +32,11 @@ In one Kubernetes Cluster, there can be only ***One*** control plane (Master Nod
 
 The components of Kubernetes can be classified as Control plan Components and Worker Node components.
 
-## Control Plane Components ( Master Node)
+## **Control Plane Components ( Master Node)**
 
 The components of the Control Plane are API Server, etcd, kube-scheduler, and the kube-controller manager.
 
-### API Server
+### **API Server**
 
 The API server acts as the primary management point for the Kubernetes cluster. It is the front end of the Kubernetes Control Plane.
 
@@ -44,7 +44,7 @@ API Server can scale horizontally, which means for scaling it uses the deploymen
 
 It provides a REST API that enables users to interact with the cluster and manage its resources. It acts as the primary interface for users and external systems to interact with the cluster and perform actions such as creating or updating deployments, scaling applications, or monitoring the state of the cluster.
 
-### etcd
+### **etcd**
 
 etcd is a distributed key-value store that stores the configuration data for the Kubernetes cluster.
 
@@ -52,7 +52,7 @@ It stores information about the state of the cluster, such as the current status
 
 etcd can scale horizontally. etcd ctl is a CLI tool to interact with etcd server.
 
-### kube-scheduler
+### **kube-scheduler**
 
 The kube-scheduler is responsible for scheduling pods on the worker nodes.
 
@@ -60,17 +60,17 @@ When a user creates a new pod or scales up an existing deployment, the kube-sche
 
 Its primary role is to ensure that each pod is scheduled to run on an appropriate node that can satisfy its resource requirements and other constraints.
 
-### kube-controller-manager
+### **kube-controller-manager**
 
 The kube-controller-manager is responsible for managing the controllers that maintain the desired state of the cluster.
 
 It includes controllers such as the node controller, which manages the nodes in the cluster, and the replication controller, which manages the replication of pods. Cron jobs, deployment controller, persistent volume protection, etc. are all a part of kube-controller-manager.
 
-## Worker Node Components
+## **Worker Node Components**
 
 The components of the Worker Node are kubelet, kube-proxy, and Container Runtime.
 
-### kubelet
+### **kubelet**
 
 The kubelet is responsible for managing the pods on the node.
 
@@ -78,7 +78,7 @@ It ensures that the containers in the pod are running and healthy, and communica
 
 One needs to install the kubelet manually on worker nodes.
 
-### kube-proxy
+### **kube-proxy**
 
 The kube-proxy is responsible for managing the network connectivity between the pods and other services in the cluster.
 
@@ -86,15 +86,15 @@ It performs load balancing and sets up network routes to enable communication be
 
 It runs on each node, using IP Table rules so any services from outside can connect to the pods.
 
-### Container Runtime
+### **Container Runtime**
 
 The container runtime, such as Docker, is responsible for running the containers that make up the pods.
 
 When a pod is scheduled on a worker node, the Kubernetes kubelet communicates with the container runtime to start the containers that make up the pod. The container runtime is responsible for creating the containers and setting up their networking and storage resources, as well as monitoring their health and resource usage.
 
-# Tasks
+# **Tasks**
 
-## Task 1: What is Kubernetes? Write in your own words. Why do we call it k8s?
+## **Task 1: What is Kubernetes? Write in your own words. Why do we call it k8s?**
 
 Kubernetes is an open-source container orchestration platform developed by Google. It provides a way to automate the deployment, scaling, and management of containerized applications.
 
@@ -104,7 +104,7 @@ For example, in the IPL which we saw till last year on OTT (HotStar), the high u
 
 ***Why do we call it K8s?*** The number 8 represents the eight letters between the "K" and the "s" in "Kubernetes."
 
-## Task 2: What are the benefits of using k8s?
+## **Task 2: What are the benefits of using k8s?**
 
 * **Portability:** Kubernetes is a portable platform that can be used on-premises or in the cloud.
     
@@ -117,7 +117,7 @@ For example, in the IPL which we saw till last year on OTT (HotStar), the high u
 * **Security:** Kubernetes provides a secure platform for running applications.
     
 
-## Task 3: Explain the architecture of Kubernetes.
+## **Task 3: Explain the architecture of Kubernetes.**
 
 Kubernetes architecture is based on the client-server model. The control plane is the server component, and it is responsible for managing the cluster. The nodes are the client components, and they are responsible for running the applications.
 
@@ -141,17 +141,17 @@ The nodes in a Kubernetes cluster are responsible for running the applications. 
 * **Container runtime:** The container runtime is responsible for running containers. The most popular container runtime is Docker.
     
 
-## Task 4: What is Control Plane?
+## **Task 4: What is Control Plane?**
 
 The control plane is the part of the system that manages the cluster. It consists of the following components: API server, Scheduler, Controller Manager, etcd.
 
 The control plane is responsible for keeping the cluster in a consistent state. It does this by monitoring the state of the cluster and taking corrective action when necessary. For example, if a pod fails, the controller manager will restart it. If a node goes down, the scheduler will assign the pods that were running on that node to other nodes.
 
-## Task 5: Write the difference between kubectl and kubelet.
+## **Task 5: Write the difference between kubectl and kubelet.**
 
 <table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Feature</strong></p></td><td colspan="1" rowspan="1"><p><strong>kubectl</strong></p></td><td colspan="1" rowspan="1"><p><strong>kubelet</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>Type</p></td><td colspan="1" rowspan="1"><p>Command-line tool</p></td><td colspan="1" rowspan="1"><p>Daemon</p></td></tr><tr><td colspan="1" rowspan="1"><p>Location</p></td><td colspan="1" rowspan="1"><p>Local machine</p></td><td colspan="1" rowspan="1"><p>Node in cluster</p></td></tr><tr><td colspan="1" rowspan="1"><p>Communication</p></td><td colspan="1" rowspan="1"><p>With Kubernetes API server</p></td><td colspan="1" rowspan="1"><p>With Kubernetes API server</p></td></tr><tr><td colspan="1" rowspan="1"><p>Purpose</p></td><td colspan="1" rowspan="1"><p>To interact with the Kubernetes cluster</p></td><td colspan="1" rowspan="1"><p>To manage containers on the node</p></td></tr></tbody></table>
 
-## Task 6: Explain the role of the API server.
+## **Task 6: Explain the role of the API server.**
 
 The API server is a core component of the control plane in Kubernetes.
 
