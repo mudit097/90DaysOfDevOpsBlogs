@@ -8,9 +8,7 @@ tags: blogging, aws, devops, 90daysofdevops, trainwithshubham
 
 ---
 
-# **User Data in AWS**
-
-In the previous blog, [Getting Started with AWS Basics](https://muditm12.hashnode.dev/getting-started-with-aws-basics-aws) [](https://muditm12.hashnode.dev/getting-started-with-aws-basics-aws)I explained AWS, its global infrastructure, and services offered by AWS that are useful for a DevOps engineer. In this blog let’s switch to a bit of automation part. I had taken a break of almost ten days owing to my mental health. Let’s continue.
+In the previous blog, [Getting Started with AWS Basics](https://muditm12.hashnode.dev/getting-started-with-aws-basics-aws) I explained AWS, its global infrastructure, and services offered by AWS that are useful for a DevOps engineer. In this blog let’s switch to a bit of automation part. I had taken a break of almost ten days owing to my mental health. Let’s continue.
 
 # **User Data in AWS**
 
