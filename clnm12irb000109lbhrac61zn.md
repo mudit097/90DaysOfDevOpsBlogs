@@ -98,7 +98,7 @@ A small tabular form to choose which one of the above two:
 
 ![](https://miro.medium.com/v2/resize:fit:875/1*N7DjKSn-zsCgPvepOAZE1Q.png align="left")
 
-In this blog, I have discussed IaC vs Configuration Management. I haven’t been consistent with the blogs from the past month, and I am trying to get back on track. Thank you for always supporting and reading my blogs.
+In this blog, I have discussed IaC vs Configuration Management. Thank you for always supporting and reading my blogs.
 
 If you have any questions or want to share your experiences, please comment below. Don’t forget to read my blogs and connect with me on LinkedIn and let’s have a conversation.
 
