@@ -8,27 +8,27 @@ tags: aws, ansible, devops, 90daysofdevops, trainwithshubham
 
 ---
 
-**What is ansible ?**
+# **What is ansible ?**
 
 It is a configuration management tool , open source .
 
-Uses YAML scripting .
+Uses YAML scripting.
 
-Works on push management .
+Works on push management.
 
-**Required architecture :**
+## **Required architecture :**
 
 We need to create 1 master node and 3 server nodes
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*xFxhTGybO2K5x8mP.png align="left")
 
-**Create an instance ,**
+# **Create an instance,**
 
-Instance name : ansible\_master
+Instance name: ansible\_master
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*lx-tIUIDzW4PB9pO.png align="left")
 
-Select ubuntu server 22.04 as amazon machine image .
+Select Ubuntu server 22.04 as the Amazon machine image.
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*pkmwN2VAprp6jTw7.png align="left")
 
@@ -36,49 +36,49 @@ Allocate port — 22
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*44bHpg9Cupf7yh8Z.png align="left")
 
-Launch the instance ,
+Launch the instance,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*RyOrpcvielNspa7F.png align="left")
 
-we have launched 1 master node , we need 3 server nodes
+we have launched 1 master node, we need 3 server nodes
 
 select the instance &gt; actions &gt; image and templates &gt; launch more like these
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*rvY9Hvj0MYA1IVk2.png align="left")
 
-Launch 3 instances with the same configurations ,
+Launch 3 instances with the same configurations,
 
 And launch instance
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*RuyFsX3af6npVzuo.png align="left")
 
-Change the name of the 3 — instances ,
+Change the name of the 3 — instances,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*CeuHF-9m-QKC8KV4.png align="left")
 
-Connect to the ansible master instance ,
+Connect to the ansible master instance,
 
 Click on the instance &gt; connect
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*qG2ek1mjG0eMO7XA.png align="left")
 
-Use command ,
+Use command,
 
 **sudo apt update**
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*pLhsVOBQK1I8vsp2.png align="left")
 
-Now install ansible ,
+Now install ansible,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*PppBdTjTjlXQ8aW-.png align="left")
 
-After configuring the master , we need to ssh with the nodes (node 1 , node 2, node 3)
+After configuring the master, we need to ssh with the nodes (node 1, node 2, node 3)
 
-Now lets connect with ansible\_server\_2 ,
+Now let's connect with ansible\_server\_2,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*BLrk8-UO3mhaX58G.png align="left")
 
-Go to the master server ,
+Go to the master server,
 
 use command
 
@@ -90,19 +90,19 @@ Copy the key from id\_rsa.pub
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*PbM-ZsGgabko2pRq.png align="left")
 
-Now go to the ansible *server*2 instance ,
+Now go to the ansible *server*2 instance,
 
 Go to .ssh &gt; authorized\_keys
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*I1zzcCwisDmU9NEx.png align="left")
 
-And paste the public key here ,
+And paste the public key here,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*x4d2Y7nh1fV6nw5U.png align="left")
 
 Save and exit.
 
-Do the same for ansible\_server\_1 and ansible\_server\_3 ,
+Do the same for ansible\_server\_1 and ansible\_server\_3,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*11Y9PR1ThXugl93X.png align="left")
 
@@ -116,71 +116,71 @@ Now go to the ansible\_master
 
 Use the command ,
 
-**ssh** [**ubuntu@52.221.219.146**](mailto:ubuntu@52.221.219.146) (public ip address of ansible\_server\_2)
+**ssh** [**ubuntu@52.221.219.146**](mailto:ubuntu@52.221.219.146) (public IP address of ansible\_server\_2)
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*cHhZ8j8OCjN1vYxG.png align="left")
 
-Now we have connected from one server to another server , this is called secured shell (ssh).
+Now we have connected from one server to another server , this is called secured shell (SSH).
 
 Now we have to create an inventory file ,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*q6U8CUv6GkJ3tzrD.png align="left")
 
-Go to ansible and create hosts ,
+Go to Ansible and create hosts,
 
 **vim hosts**
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*uirBurU95hPMUdFH.png align="left")
 
-Now add the servers inside the inventory ,
+Now add the servers inside the inventory,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*zdN62DX0ICTuGk5y.png align="left")
 
-Now the servers are ready in the inventory .
+Now the servers are ready in the inventory.
 
-To install python by default in all the servers ,
+To install Python by default in all the servers,
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*TaZ4CCcHl6Co1XSH.png align="left")
 
-Save and exit .
+Save and exit.
 
-Now lets check if the inventory / host file is correct ,
+Now let us check if the inventory/host file is correct,
 
 **ansible-inventory — list -y**
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*ODtogBVzMXp2T4ar.png align="left")
 
-We get this error because our host file is in different directory ,
+We get this error because our host file is in a different directory ,
 
 **/home/ubuntu/ansible**
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*IRP3YtrKqQTvbwVT.png align="left")
 
-Use the command ,
+Use the command,
 
 **ansible-inventory — list -y -i /home/ubuntu/ansible/hosts**
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*HzUjsvzMdKKP_831.png align="left")
 
-we have got all the details of the server .
+we have got all the details of the server.
 
-Now lets ping all the servers with a module .
+Now let's ping all the servers with a module.
 
-**What is module ?**
+**What is module?**
 
-module is a command or set of commands to be executed on client side .
+module is a command or set of commands to be executed on the client side .
 
 **ansible all -m ping -i /home/ubuntu/ansible/hosts**
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*thoPESkDznBQeoXq.png align="left")
 
-Now to check memory usage ,
+Now to check memory usage,
 
 **ansible all -a “free -h” -i /home/ubuntu/ansible/hosts**
 
 ![](https://miro.medium.com/v2/resize:fit:875/0*7qdbop8DXxdgVPK2.png align="left")
 
-To check server uptime ,
+To check server uptime,
 
 **ansible servers -a “uptime” -i /home/ubuntu/ansible/hosts**
 
