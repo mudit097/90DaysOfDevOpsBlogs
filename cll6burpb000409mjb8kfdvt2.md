@@ -93,11 +93,11 @@ docker pull mysql
 docker run -it -e MYSQL_ROOT_PASSWORD=password mysql bash
 ```
 
-\-it stands for interactive terminal
+**\-it** stands for interactive terminal
 
-\-e stands for eb=nvironment variable
+**\-e** stands for setting an environment variable.
 
-MYSQL\_ROOT\_PASSWORD stores the password.
+**MYSQL\_ROOT\_PASSWORD** stores the password.
 
 Bash indicates that we can interact with the terminal via bash.
 
