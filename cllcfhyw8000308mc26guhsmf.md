@@ -260,7 +260,7 @@ docker images
 docker inspect nginx
 ```
 
-![](https://miro.medium.com/v2/resize:fit:875/0*DP99Dc5ei_SIuKCe align="left")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697578671801/4e9c6f5c-277e-4e0d-99eb-1eb0f22cd403.png align="center")
 
 The output of docker inspect command has various details in JSON format. Look for the following sections to use custom formatting and inspect running processes and exposed ports:
 
