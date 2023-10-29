@@ -10,10 +10,6 @@ tags: blogging, aws, monitoring, 90daysofdevops, trainwithshubham
 
 In this section, we delve into the comprehensive process of deploying Grafana within an AWS EC2 instance. Grafana stands as an essential data visualization and monitoring tool, pivotal for interpreting and managing diverse datasets. Our guide offers a step-by-step walkthrough, allowing users to harness the potential of Grafana’s user-friendly interface for creating insightful dashboards and analyzing metrics effectively.
 
-# **TABLE OF CONTENTS**
-
-## **1\. Setup Grafana in your AWS EC2 Instance**
-
 # **1\. Setup Grafana in your AWS EC2 Instance**
 
 * Go to the AWS console and Launch an EC2 instance for Grafana.
